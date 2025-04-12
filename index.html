@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+      integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>Authentication is Fun</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: rgb(255, 173, 205);
+        background-image: url(sakura\ bg.png);
+        background-size: cover;
+        color: rgb(255, 255, 255);
+        font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="authForm">
+      <h2>Sign Up or Sign In</h2>
+      <input type="email" placeholder="email" id="userEmail" />
+      <input type="password" placeholder="password" id="userPassword" />
+      <br /><br />
+      <button id="signUpButton">Sign Up</button>
+      <button id="signInButton">Sign In</button>
+    </div>
+
+    <div id="secretContent">
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        [class*="col-"] {
+          float: left;
+          padding: 15px;
+        }
+        
+        html {
+          font-family: "Lucida Sans", sans-serif;
+        }
+        
+        .header {
+          background-color: #ffffff;
+          color: #ff7587;
+          padding: 15px;
+        }
+        
+        .menu ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .menu li {
+          padding: 8px;
+          margin-bottom: 7px;
+          background-color: #ff5e86;
+          color: #ffffff;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        
+        .menu li:hover {
+          background-color: #ff2c61;
+        }
+        
+        .aside {
+          background-color: #ff5e86;
+          padding: 15px;
+          color: #ffffff;
+          text-align: center;
+          font-size: 14px;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        
+        .footer {
+          background-color: rgb(255, 150, 181);
+          color: #ffffff;
+          text-align: center;
+          font-size: 12px;
+          padding: 3px;
+        }
+        
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+        
+        @media only screen and (min-width: 600px) {
+          /* For tablets: */
+          .col-s-1 {width: 8.33%;}
+          .col-s-2 {width: 16.66%;}
+          .col-s-3 {width: 25%;}
+          .col-s-4 {width: 33.33%;}
+          .col-s-5 {width: 41.66%;}
+          .col-s-6 {width: 50%;}
+          .col-s-7 {width: 58.33%;}
+          .col-s-8 {width: 66.66%;}
+          .col-s-9 {width: 75%;}
+          .col-s-10 {width: 83.33%;}
+          .col-s-11 {width: 91.66%;}
+          .col-s-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 768px) {
+          /* For desktop: */
+          .col-1 {width: 8.33%;}
+          .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+          .col-4 {width: 33.33%;}
+          .col-5 {width: 41.66%;}
+          .col-6 {width: 50%;}
+          .col-7 {width: 58.33%;}
+          .col-8 {width: 66.66%;}
+          .col-9 {width: 75%;}
+          .col-10 {width: 83.33%;}
+          .col-11 {width: 91.66%;}
+          .col-12 {width: 100%;}
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="header">
+          <h1>J A P A N</h1>
+        </div>
+        
+        <div class="row">
+          <div class="col-3 col-s-3 menu">
+            <ul>
+              <li>The Flight</li>
+              <li>The City</li>
+              <li>The Island</li>
+              <li>The Food</li>
+            </ul>
+          </div>
+        
+          <div class="col-6 col-s-9">
+            <h1>SAKURA SEASON</h1>
+            <p>Japan’s iconic cherry blossoms, or sakura, are beginning to bloom across the country! As of April 3, 2025, the cherry blossom season has kicked off in much of western and central Japan, with forecasts predicting a stunning display over the coming weeks for northern Japan.
+            </p>
+          </div>
+        
+          <div class="col-3 col-s-12">
+            <div class="aside">
+              <h2>What?</h2>
+              <p>Cherry blossoms, or sakura, are the delicate pink flowers that bloom on cherry trees in spring.</p>
+              <h2>Where?</h2>
+              <p>Cherry blossoms in Japan typically start blooming in late January in warm southern regions such as Okinawa and Kyushu.</p>
+              <h2>How?</h2>
+              <p>Hanami is the Japanese custom of stopping to enjoy the brief beauty of the blooming cherry blossom trees.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer">
+          <p>Resize the browser window to see how the content respond to the resizing.</p>
+        </div>
+      
+      
+      
+      <button id="signOutButton">Sign Out</button>
+    </div>
+
+    <script type="module">
+      //Update the below URL with the appropriate version if necessary.
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        onAuthStateChanged,
+        signOut,
+        //Update the below URL with the appropriate version if necessary.
+      } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+
+      // INSERT YOUR FIREBASE CONFIG OBJECT HERE
+      const firebaseConfig = {
+        apiKey: "AIzaSyAeBLawmzg48DnhE3ZBvNe1W67GJqKEC-U",
+  authDomain: "ylagan-midterms-act2.firebaseapp.com",
+  databaseURL: "https://ylagan-midterms-act2-default-rtdb.firebaseio.com",
+  projectId: "ylagan-midterms-act2",
+  storageBucket: "ylagan-midterms-act2.firebasestorage.app",
+  messagingSenderId: "132931544067",
+  appId: "1:132931544067:web:b936c8ca4507e6cc11da36"
+      };
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      const userEmail = document.querySelector("#userEmail");
+      const userPassword = document.querySelector("#userPassword");
+      const authForm = document.querySelector("#authForm");
+      const secretContent = document.querySelector("#secretContent");
+      const signUpButton = document.querySelector("#signUpButton");
+      const signInButton = document.querySelector("#signInButton");
+      const signOutButton = document.querySelector("#signOutButton");
+
+      secretContent.style.display = "none";
+
+      const userSignUp = async () => {
+        const signUpEmail = userEmail.value;
+        const signUpPassword = userPassword.value;
+        createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+            Swal.fire("Your Account is succesfully created!");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode + errorMessage);
+          });
+      };
+
+      const userSignIn = async () => {
+        const signInEmail = userEmail.value;
+        const signInPassword = userPassword.value;
+        signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            Swal.fire("You have signed in successfully!");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode + errorMessage);
+          });
+      };
+
+      const checkAuthState = async () => {
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            authForm.style.display = "none";
+            secretContent.style.display = "block";
+          } else {
+            authForm.style.display = "block";
+            secretContent.style.display = "none";
+          }
+        });
+      };
+
+      const userSignOut = async () => {
+        await signOut(auth);
+        Swal.fire("User Logout");
+      };
+
+      checkAuthState();
+
+      signUpButton.addEventListener("click", userSignUp);
+      signInButton.addEventListener("click", userSignIn);
+      signOutButton.addEventListener("click", userSignOut);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/090fe43456.js" crossorigin="anonymous"></script>
+  </body>
+</html>
